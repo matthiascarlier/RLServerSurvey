@@ -14,6 +14,7 @@ namespace RLServerSurvey
 		/// Designer variable used to keep track of non-visual components.
 		/// </summary>
 		private System.ComponentModel.IContainer components = null;
+		private System.Windows.Forms.Button startStopButton;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -36,12 +37,29 @@ namespace RLServerSurvey
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.startStopButton = new System.Windows.Forms.Button();
+			this.SuspendLayout();
+			// 
+			// startStopButton
+			// 
+			this.startStopButton.Location = new System.Drawing.Point(12, 12);
+			this.startStopButton.Name = "startStopButton";
+			this.startStopButton.Size = new System.Drawing.Size(75, 23);
+			this.startStopButton.TabIndex = 0;
+			this.startStopButton.Text = "Start";
+			this.startStopButton.UseVisualStyleBackColor = true;
+			this.startStopButton.Click += new System.EventHandler(this.StartStopButtonClick);
 			// 
 			// MainForm
 			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.Text = "RLServerSurvey";
+			this.ClientSize = new System.Drawing.Size(719, 361);
+			this.Controls.Add(this.startStopButton);
 			this.Name = "MainForm";
+			this.Text = "RLServerSurvey";
+			this.ResumeLayout(false);
+
 		}
 	}
 }

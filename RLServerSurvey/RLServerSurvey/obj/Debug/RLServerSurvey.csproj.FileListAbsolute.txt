@@ -1,0 +1,8 @@
+D:\projects\RLServerSurvey\RLServerSurvey\RLServerSurvey\obj\Debug\RLServerSurvey.csprojResolveAssemblyReference.cache
+D:\projects\RLServerSurvey\RLServerSurvey\RLServerSurvey\obj\Debug\RLServerSurvey.MainForm.resources
+D:\projects\RLServerSurvey\RLServerSurvey\RLServerSurvey\obj\Debug\RLServerSurvey.csproj.GenerateResource.Cache
+D:\projects\RLServerSurvey\RLServerSurvey\RLServerSurvey\bin\Debug\RLServerSurvey.exe.config
+D:\projects\RLServerSurvey\RLServerSurvey\RLServerSurvey\bin\Debug\RLServerSurvey.exe
+D:\projects\RLServerSurvey\RLServerSurvey\RLServerSurvey\bin\Debug\RLServerSurvey.pdb
+D:\projects\RLServerSurvey\RLServerSurvey\RLServerSurvey\obj\Debug\RLServerSurvey.exe
+D:\projects\RLServerSurvey\RLServerSurvey\RLServerSurvey\obj\Debug\RLServerSurvey.pdb

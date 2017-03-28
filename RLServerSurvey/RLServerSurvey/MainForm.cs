@@ -10,6 +10,9 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Threading;
+using System.Diagnostics;
+using System.IO;
 
 namespace RLServerSurvey
 {
@@ -18,6 +21,8 @@ namespace RLServerSurvey
 	/// </summary>
 	public partial class MainForm : Form
 	{
+		Thread oThread;
+		
 		public MainForm()
 		{
 			//
@@ -28,6 +33,51 @@ namespace RLServerSurvey
 			//
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
+			Debug.WriteLine("test");
+		}
+		
+		void StartStopButtonClick(object sender, EventArgs e)
+		{
+			if(startStopButton.Text == "Start"){
+				//start running
+				startStopButton.Text = "Stop";
+				 oThread = new Thread(new ThreadStart(checkFileLoop));
+				 oThread.Start();
+			}
+			else if(startStopButton.Text == "Stop"){
+				//stop running 
+				startStopButton.Text = "Start";
+				oThread.Abort();
+				oThread.Join();
+			}
+			else{
+				throw new System.Exception("neither \"Start\" nor \"Stop\"");
+			}
+		}
+		
+		void checkFileLoop(){
+			using (var fs = new FileStream("C:\\Users\\matthias\\Documents\\My Games\\Rocket League\\TAGame\\Logs\\Launch.log", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+			{
+				using (var sr = new StreamReader(fs))
+				{
+					sr.ReadToEnd();
+	        		string s = String.Empty;
+	        		while (true)
+	        		{
+	        			s = sr.ReadLine();
+	            	   	if(s == null){
+	            	   		Debug.WriteLine("line was empty");
+	            	   		Thread.Sleep(1000);
+	            	   	}
+	            	   	else{
+	            	   		Debug.WriteLine(s);
+	            	   		//TODO check if line means end of game.
+	            	   	}
+	        		}
+				}
+			}
 		}
 	}
+	
+	
 }
