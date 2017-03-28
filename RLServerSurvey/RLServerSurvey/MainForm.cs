@@ -22,6 +22,8 @@ namespace RLServerSurvey
 	public partial class MainForm : Form
 	{
 		Thread oThread;
+		String lastServerName = "testName";
+		String lastServerIP = "testIP";
 		
 		public MainForm()
 		{
@@ -72,10 +74,24 @@ namespace RLServerSurvey
 	            	   	else{
 	            	   		Debug.WriteLine(s);
 	            	   		//TODO check if line means end of game.
+	            	   		if(s.Contains("end")){
+	            	   			//TODO create popup
+	            	   			Invoke((MethodInvoker)delegate() {
+	            	   				new EndOfGamePopup(lastServerIP, lastServerName).Show(this);                  	
+    							});
+	            	   		}
+	            	   		
+	            	   		//TODO check if line has server IP and/or name
+	            	   		
 	            	   	}
 	        		}
 				}
 			}
+		}
+		void MainFormFormClosing(object sender, FormClosingEventArgs e)
+		{
+			oThread.Abort();
+			oThread.Join();
 		}
 	}
 	

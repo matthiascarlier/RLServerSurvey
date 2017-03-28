@@ -58,6 +58,7 @@ namespace RLServerSurvey
 			this.Controls.Add(this.startStopButton);
 			this.Name = "MainForm";
 			this.Text = "RLServerSurvey";
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainFormFormClosing);
 			this.ResumeLayout(false);
 
 		}

@@ -6,3 +6,4 @@ D:\projects\RLServerSurvey\RLServerSurvey\RLServerSurvey\bin\Debug\RLServerSurve
 D:\projects\RLServerSurvey\RLServerSurvey\RLServerSurvey\bin\Debug\RLServerSurvey.pdb
 D:\projects\RLServerSurvey\RLServerSurvey\RLServerSurvey\obj\Debug\RLServerSurvey.exe
 D:\projects\RLServerSurvey\RLServerSurvey\RLServerSurvey\obj\Debug\RLServerSurvey.pdb
+D:\projects\RLServerSurvey\RLServerSurvey\RLServerSurvey\obj\Debug\RLServerSurvey.EndOfGamePopup.resources
